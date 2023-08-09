@@ -36,7 +36,7 @@ const updatePackageJsonVersion = async () => {
     }
 
     // next release version of prerelease branch consists of {version}-{postfix}
-    const newVersion = result.nextRelease.version.split('-')[0];
+    const newVersion = result.nextRelease.version;
 
     core.setOutput('NEW_VERSION', newVersion);
     core.setOutput('NEW_CHANGES', result.nextRelease.notes);
