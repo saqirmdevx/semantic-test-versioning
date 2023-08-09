@@ -1,3 +1,10 @@
+## 1.0.0 (2023-08-09)
+
+
+### :sparkles: Features
+
+* Initial commit ([72fdfca](https://github.com/saqirmdevx/semantic-test-versioning/commit/72fdfca8d834264b0a24855bbacbf36c76d19b83))
+
 ## [1.4.0](https://github.com/saqirmdevx/semantic-test-versioning/compare/v1.3.1...v1.4.0) (2023-08-09)
 
 
