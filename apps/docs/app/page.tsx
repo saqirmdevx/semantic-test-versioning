@@ -1,9 +1,10 @@
-import { Button, Header } from "ui";
+import { Button, Header } from 'ui';
 
 export default function Page() {
   return (
     <>
-      <Header text="Docs" />
+      <Header text='Docs' />
+      <p>Docs page - Relevant change - Random change</p>
       <Button />
     </>
   );
