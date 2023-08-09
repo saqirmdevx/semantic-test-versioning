@@ -1,0 +1,47 @@
+name: Release
+on:
+  push:
+    branches:
+      - main
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Update package.json version
+        id: update-package-json-version
+        env:
+          GITHUB_AUTH: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
+        run: |
+          node ${GITHUB_WORKSPACE}/.github/workflows/updatePackageVersion
+      - name: Commit package.json update
+        run: |
+          git config --local user.name "semantic-release-bot"
+          git add .
+          git commit -m "Semantic Release: Update package.json version [skip ci]"
+      - name: Push changes # push the output folder to your repo
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
+        run: npx semantic-release

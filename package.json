@@ -1,0 +1,132 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.7",
+    "@semantic-release/npm": "9.0.2",
+    "@turbo/gen": "^1.9.7",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "*",
+    "prettier": "^2.5.1",
+    "semantic-release": "^21.0.7",
+    "turbo": "latest"
+  },
+  "name": "semantic-test",
+  "packageManager": "npm@8.1.0",
+  "release": {
+    "branches": [
+      "develop"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "./CHANGELOG.md"
+        }
+      ],
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "./CHANGELOG.md"
+          ]
+        }
+      ]
+    ],
+    "preset": "conventionalcommits",
+    "presetConfig": {
+      "types": [
+        {
+          "type": "feat",
+          "section": ":sparkles: Features",
+          "hidden": false
+        },
+        {
+          "type": "fix",
+          "section": ":bug: Bug Fixes",
+          "hidden": false
+        },
+        {
+          "type": "perf",
+          "section": ":zap: Performance Improvements",
+          "hidden": false
+        },
+        {
+          "type": "enh",
+          "section": ":up: Enhancements",
+          "hidden": false
+        },
+        {
+          "type": "revert",
+          "section": ":rewind: Reverts",
+          "hidden": false
+        },
+        {
+          "type": "docs",
+          "section": ":books: Documentation",
+          "hidden": false
+        },
+        {
+          "type": "res",
+          "section": ":microscope: Research",
+          "hidden": false
+        },
+        {
+          "type": "style",
+          "section": ":lipstick: Styles",
+          "hidden": false
+        },
+        {
+          "type": "chore",
+          "section": ":octopus: Miscellaneous Chores",
+          "hidden": false
+        },
+        {
+          "type": "refactor",
+          "section": ":recycle: Code Refactoring",
+          "hidden": false
+        },
+        {
+          "type": "test",
+          "section": ":white_check_mark: Tests",
+          "hidden": false
+        },
+        {
+          "type": "build",
+          "section": ":package: Build System",
+          "hidden": false
+        },
+        {
+          "type": "ci",
+          "section": ":construction_worker: Continuous Integration",
+          "hidden": false
+        }
+      ]
+    }
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "conventional-changelog-conventionalcommits": "^6.1.0"
+  }
+}
