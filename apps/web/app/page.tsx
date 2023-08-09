@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <>
       <Header text='Web' />
-      <p>Web page - Relevant change -cc</p>
+      <p>Web page - Relevant change - Random change</p>
       <Button />
     </>
   );
