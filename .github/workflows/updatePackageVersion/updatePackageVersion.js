@@ -1,13 +1,17 @@
-const core = require('@actions/core');
 const fs = require('fs');
 const path = require('path');
 
 const readPackageJsonAndUpdateVersion = (filePath, newVersion) => {
-  // Reading package.json
-  const packageJson = fs.readFileSync(
-    path.join(__dirname, `${filePath}/package.json`),
-    'utf8'
+  const packageJsonPath = path.join(
+    __dirname,
+    '..',
+    '..',
+    '..',
+    filePath,
+    'package.json'
   );
+  // Reading package.json
+  const packageJson = fs.readFileSync(packageJsonPath, 'utf8');
 
   if (!packageJson) {
     throw new Error('package.json not found');
@@ -15,9 +19,13 @@ const readPackageJsonAndUpdateVersion = (filePath, newVersion) => {
 
   // Updating package.json
   const packageJsonObject = JSON.parse(packageJson);
+  if (!packageJsonObject || packageJsonObject.version === newVersion) {
+    return;
+  }
+
   packageJsonObject.version = newVersion;
   fs.writeFileSync(
-    path.join(__dirname, `${filePath}/package.json`),
+    packageJsonPath,
     JSON.stringify(packageJsonObject, null, 2),
     'utf8'
   );
@@ -32,17 +40,13 @@ const updatePackageJsonVersion = async () => {
     });
 
     if (!result) {
-      return;
+      throw new Error('Semantic release failed to provide a result');
     }
 
-    // next release version of prerelease branch consists of {version}-{postfix}
     const newVersion = result.nextRelease.version;
 
-    core.setOutput('NEW_VERSION', newVersion);
-    core.setOutput('NEW_CHANGES', result.nextRelease.notes);
-
-    readPackageJsonAndUpdateVersion('../../../apps/web', newVersion);
-    readPackageJsonAndUpdateVersion('../../../apps/docs', newVersion);
+    readPackageJsonAndUpdateVersion('apps/docs', newVersion);
+    readPackageJsonAndUpdateVersion('apps/web', newVersion);
   } catch (error) {
     console.error('The automated release failed with %O', error);
     throw error;
