@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/saqirmdevx/semantic-test-versioning/compare/v1.1.0...v1.2.0) (2023-08-10)
+
+
+### :sparkles: Features
+
+* Update pacakge script ([1e992bc](https://github.com/saqirmdevx/semantic-test-versioning/commit/1e992bc6f166b3109bbd54cf3dbb9279029b20d9))
+
 ## [1.1.0](https://github.com/saqirmdevx/semantic-test-versioning/compare/v1.0.0...v1.1.0) (2023-08-09)
 
 
