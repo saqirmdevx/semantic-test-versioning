@@ -6,7 +6,6 @@ export default function Page() {
       <Header text='Web' />
       <p>Web page - Relevant change - Random change</p>
       <p>Web page - Relevant change - Random change</p>
-      <p>Web page - Relevant change - Random change</p>
       <Button />
     </>
   );
