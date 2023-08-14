@@ -34,7 +34,7 @@ jobs:
         run: |
           git config --local user.name "semantic-release-bot"
           git add .
-          git commit -m "Semantic Release: Update package.json version [skip ci]"
+          git commit -m "Semantic Release: Update package.json version [skip ci]" --allow-empty
       - name: Push changes # push the output folder to your repo
         uses: ad-m/github-push-action@master
         with:
