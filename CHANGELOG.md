@@ -1,3 +1,15 @@
+## [1.2.0](https://github.com/saqirmdevx/semantic-test-versioning/compare/v1.1.1...v1.2.0) (2023-08-14)
+
+
+### :sparkles: Features
+
+* Update version ([785a406](https://github.com/saqirmdevx/semantic-test-versioning/commit/785a4061fa7225198ea76b5145c2d58077652db7))
+
+
+### :up: Enhancements
+
+* Version update ([b3ab04b](https://github.com/saqirmdevx/semantic-test-versioning/commit/b3ab04bb42fb74a22ca5e84b8dcc8a428e44b1b7))
+
 ## [1.1.1](https://github.com/saqirmdevx/semantic-test-versioning/compare/v1.1.0...v1.1.1) (2023-08-14)
 
 
