@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/saqirmdevx/semantic-test-versioning/compare/v1.0.0...v1.1.0) (2023-08-14)
+
+
+### :sparkles: Features
+
+* Major version update ([6c76566](https://github.com/saqirmdevx/semantic-test-versioning/commit/6c76566aad5ffb32b8e4b4a26df40a8ebbe343b6))
+
 ## 1.0.0 (2023-08-14)
 
 
