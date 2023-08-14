@@ -7,9 +7,6 @@ export default function Page() {
       <p>Web page - Relevant change - Random change</p>
       <p>Web page - Relevant change - Random change</p>
       <p>Web page - Relevant change - Random change</p>
-      <p>Web page - Relevant change - Random change</p>
-      <p>Web page - Relevant change - Random change</p>
-      <p>Web page - Relevant change - Random change</p>
       <Button />
     </>
   );
