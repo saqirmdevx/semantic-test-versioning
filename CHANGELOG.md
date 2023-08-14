@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/saqirmdevx/semantic-test-versioning/compare/v1.1.0...v1.1.1) (2023-08-14)
+
+
+### :bug: Bug Fixes
+
+* Minor version update ([2e57941](https://github.com/saqirmdevx/semantic-test-versioning/commit/2e57941982f930e00eaa55792b8fac6495ffaa18))
+
 ## [1.1.0](https://github.com/saqirmdevx/semantic-test-versioning/compare/v1.0.0...v1.1.0) (2023-08-14)
 
 
