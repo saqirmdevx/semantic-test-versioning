@@ -5,6 +5,29 @@
 
 * Random Change ([84969a0](https://github.com/saqirmdevx/semantic-test-versioning/commit/84969a06c723593007b60d0bff186a080c99a20b))
 * Update pacakge script ([1e992bc](https://github.com/saqirmdevx/semantic-test-versioning/commit/1e992bc6f166b3109bbd54cf3dbb9279029b20d9))
+* Update version ([dd88826](https://github.com/saqirmdevx/semantic-test-versioning/commit/dd888263d7f4f52bf13d2fe1b096fd334f2b0e77))
+* Update version to v1.4 ([4734701](https://github.com/saqirmdevx/semantic-test-versioning/commit/47347010b6ae4e0388f68fb2d2fc9a57dced60d3))
+
+
+### :up: Enhancements
+
+* Allow empty ([8e58c60](https://github.com/saqirmdevx/semantic-test-versioning/commit/8e58c60ee11c970505557d1f8419b8a78e613af8))
+* Another update ([16699f6](https://github.com/saqirmdevx/semantic-test-versioning/commit/16699f6f0b3322fcaa2db19b04bc54c2afa72dbf))
+
+
+### :octopus: Miscellaneous Chores
+
+* **release:** 1.2.0 [skip ci] ([64bd837](https://github.com/saqirmdevx/semantic-test-versioning/commit/64bd83776ac0a74a208acf58f49d0f8c30b4414f))
+* **release:** 1.2.0 [skip ci] ([5c8366f](https://github.com/saqirmdevx/semantic-test-versioning/commit/5c8366f19d4f58a049bb82bc426d9965e55315fd))
+* **release:** 1.2.0 [skip ci] ([cca2a72](https://github.com/saqirmdevx/semantic-test-versioning/commit/cca2a72908264c57b0b7e8694dda9612da2be16c))
+
+## [1.2.0](https://github.com/saqirmdevx/semantic-test-versioning/compare/v1.1.0...v1.2.0) (2023-08-14)
+
+
+### :sparkles: Features
+
+* Random Change ([84969a0](https://github.com/saqirmdevx/semantic-test-versioning/commit/84969a06c723593007b60d0bff186a080c99a20b))
+* Update pacakge script ([1e992bc](https://github.com/saqirmdevx/semantic-test-versioning/commit/1e992bc6f166b3109bbd54cf3dbb9279029b20d9))
 * Update version to v1.4 ([4734701](https://github.com/saqirmdevx/semantic-test-versioning/commit/47347010b6ae4e0388f68fb2d2fc9a57dced60d3))
 
 
